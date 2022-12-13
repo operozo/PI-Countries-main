@@ -8,11 +8,11 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       primaryKey: true,
       // allowNull: false, no hace falta xq hay PK
-      autoIncrement: true
+      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     difficulty: {
       type: DataTypes.ENUM('1', '2', '3', '4', '5'),
@@ -22,6 +22,7 @@ module.exports = (sequelize) => {
     },
     season: {
       type: DataTypes.ENUM('Verano', 'Otoño', 'Invierno', 'Primavera'),
+      allowNull: false,
     },
   },
     {
